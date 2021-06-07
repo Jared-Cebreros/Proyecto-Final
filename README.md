@@ -1,5 +1,8 @@
 # Proyecto-Final
 Proyecto final programacion avanzada
+
+El proyecto consiste en un lector de lenguaje de señas universal, ayudando al usuario a aprender y identificar cada letra del abecedario universal de señas. Utlizando las librerias basicas como son Cv2 y Numpy, es posible realizar un facil lector de señas, ya que solo es necesario comparar los contornos generados en cada imagen o video, de esta forma saber a que letra se refiere.
+
 import random 
  
 def buscarElemento(lista, elemento): #es para ubicar un elemnto de una lista nos podria servia para ubicar imagines, faltan cambios 
