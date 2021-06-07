@@ -9,9 +9,6 @@ while True:
     next, frame = vc.read()
     #Cuando se deja presionado la tecla W la camara se activara, si se deja de pulsar esta se detendra con la ultima iagen que se detecte
     if waitKey(2) == ord("w"):
-        #img2 = cv2.imread(input("Escribe el nombre de la letra deseada(agrega .png al final): "))
-        #plt.imshow(img2)
-        #plt.show()
         cuadro = cv2.rectangle (frame,(0, 0),(200,200), (0, 255, 0), 2)
         rectangulo = cv2.rectangle (frame,(40, 15),(150,200), (0, 0, 255), 2)
         cv2.imshow("webcam", frame)
@@ -29,7 +26,7 @@ while True:
         cv2.imwrite("Rcaptura.png", crop_img)
         cv2.imshow("Rcaptura.png",crop_img)
         cv2.waitKey()
-        cv2.destroyAllWindows()
+        #cv2.destroyAllWindows()
         #Cuando se preciona i se contornea una de las letras del abcedario y da sus coordenadas
     if waitKey(6) == ord ("i"):
         img2 = cv2.imread(input("Escribe el nombre de la letra deseada(agrega .png al final): "))
@@ -53,7 +50,7 @@ while True:
         A2 = print(str(contourss[-1].reshape(-1)).replace('\n',',').replace(' ',',').replace(',,',',').replace(',,',',').replace('[,','['))
         plt.show() 
         if A1 == A2 or A1 == A2+1 or A1 == A2-1:  
-            print("La letra es: ")
+            print("Si es la letra seleccionada")
         else:
             print("No se encuentra ninguna letra")
     if waitKey(1) == ord("q"):
